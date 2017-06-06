@@ -7,8 +7,9 @@ phases:
   build:
     commands:
       - npm test
-      - serverless deploy --stage dev
-      - serverless package --stage prod --package artifacts
+      - serverless package --stage dev --package dev-artifacts
+      - serverless package --stage prod --package prod-artifacts
 artifacts:
   files:
-    - artifacts/*
+    - dev-artifacts/*
+    - prod-artifacts/*
