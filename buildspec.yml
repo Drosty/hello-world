@@ -6,7 +6,9 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless deploy | tee deploy.out 
-  post_build:
-    commands:
       - npm test
+      - serverless deploy --stage dev
+      - serverless package --stage prod --package artifacts
+artifacts:
+  files:
+    - artifacts/*
