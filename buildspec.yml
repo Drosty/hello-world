@@ -7,9 +7,12 @@ phases:
   build:
     commands:
       - npm test
-      - serverless package --stage dev --package dev-artifacts
-      - serverless package --stage prod --package prod-artifacts
+      - serverless package --package prod-artifacts
+      - sed "s/^service: .*$/&-staging/" serverless.yml >serverless.yml.new && rm serverless.yml && mv serverless.yml.new serverless.yml
+      - serverless deploy
+  post_build:
+    commands:
+      - rm -r node_modules
 artifacts:
   files:
-    - dev-artifacts/*
-    - prod-artifacts/*
+    - *
