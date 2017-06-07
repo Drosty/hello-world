@@ -15,4 +15,4 @@ phases:
       - rm -r node_modules
 artifacts:
   files:
-    - *
+    - ./*
