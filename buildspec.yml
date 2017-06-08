@@ -12,9 +12,7 @@ phases:
       - rm serverless.yml
       - mv serverless.yml.new serverless.yml
       - serverless deploy
-  post_build:
-    commands:
+      - filename=`date +%s%3N`.zip
+      - zip . $filename
+      - aws s3 cp $filename s3://codepipeline-hello/dev
       - rm -r node_modules
-artifacts:
-  files:
-    - '**/*'
