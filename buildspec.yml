@@ -8,7 +8,7 @@ phases:
     commands:
       - npm test
       - serverless package --package prod-artifacts
-      - sed 's/^service: .*$/&-staging/' serverless.yml > serverless.yml.new
+      - "sed \"s/^service: .*$/&-staging/g\" serverless.yml > serverless.yml.new"
       - rm serverless.yml
       - mv serverless.yml.new serverless.yml
       - serverless deploy
