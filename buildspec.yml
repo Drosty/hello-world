@@ -3,6 +3,7 @@ phases:
   install:
     commands:
       - npm install
+      - whoami
       - npm install -g serverless
   build:
     commands:
