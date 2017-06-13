@@ -6,7 +6,7 @@ test('hello', async () => {
   const expected = {
     statusCode: 200,
     body: JSON.stringify({
-      version: 'v17-1',
+      version: 'v17-2',
       message: 'I am local'
     }),
   };
