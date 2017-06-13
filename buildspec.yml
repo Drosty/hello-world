@@ -6,14 +6,10 @@ phases:
       - npm install -g serverless@1.14.0
   build:
     commands:
-      - npm test
-      - serverless package --package prod-artifacts
-      - "sed \"s/^service: .*$/&-staging/g\" serverless.yml > serverless.yml.new"
-      - rm serverless.yml
-      - mv serverless.yml.new serverless.yml
-      - serverless deploy
+      - serverless package --stage prod --package prod-artifacts
+      - serverless package --stage dev --package dev-artifacts
+      - serverless deploy --stage dev --package dev-artifacts
       - filename=`date +%s%3N`.zip
       - "echo $filename"
       - "zip -r $filename * -x node_modules/\\*"
-      - ls -lsa
-      - "aws s3 cp $filename s3://codepipeline-hello/dev/$filename"
+      - "aws s3 cp $filename s3://noma-data/dev/$filename"

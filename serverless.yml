@@ -1,4 +1,4 @@
-service: travisci-test
+service: lambda-cicd-sample
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -7,12 +7,20 @@ plugins:
 # Enable auto-packing of external modules
 custom:
   webpackIncludeModules: true
+  stage: ${opt:stage, self:provider.stage}
+  prod:
+    MESSAGE: 'I am prod'
+  dev:
+    MESSAGE: 'I am dev'
+  local:
+    MESSAGE: 'I am local'
 
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: dev
+  stage: local
   region: us-east-1
+  environment: ${self:custom.${self:custom.stage}}
 
 functions:
   hello:

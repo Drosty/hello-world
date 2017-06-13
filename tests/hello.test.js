@@ -5,7 +5,10 @@ test('hello', async () => {
   const context = {};
   const expected = {
     statusCode: 200,
-    body: JSON.stringify({version: 'v15-12'}),
+    body: JSON.stringify({
+      version: 'v17-1',
+      message: 'I am local'
+    }),
   };
 
   function callback(error, result) {
