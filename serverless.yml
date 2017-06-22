@@ -1,4 +1,4 @@
-service: lambda-cicd-sample
+service2: lambda-cicd-sample
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
