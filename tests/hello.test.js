@@ -6,7 +6,7 @@ test('hello', async () => {
   const expected = {
     statusCode: 200,
     body: JSON.stringify({
-      version: 'v19-8',
+      version: 'v19-9',
     }),
   };
 
