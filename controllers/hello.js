@@ -2,7 +2,7 @@ export const main = async (event, context, callback) => {
   callback(null, {
     statusCode: 200,
     body: JSON.stringify({
-      version: 'v19-6',
+      version: 'v19-7',
       message: process.env.MESSAGE
     })
   });
