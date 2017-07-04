@@ -13,7 +13,7 @@ custom:
   dev:
     MESSAGE: 'I am dev'
     MESSAGE2: 'I am dev 2'
-    MESSAGE3: 'I am dev 3'
+    MESSAGE4: 'I am dev 4'
   local:
     MESSAGE: 'I am local'
 
