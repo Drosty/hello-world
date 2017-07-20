@@ -8,9 +8,9 @@ plugins:
 custom:
   webpackIncludeModules: true
   stage: ${opt:stage, self:provider.stage}
-  prod:
+  Production:
     MESSAGE: 'I am prod'
-  dev:
+  Staging:
     MESSAGE: 'I am dev'
     MESSAGE2: 'I am dev 2'
     MESSAGE3: 'I am dev 3'
