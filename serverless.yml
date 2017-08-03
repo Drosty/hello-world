@@ -20,8 +20,9 @@ custom:
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: local
+  stage: staging
   region: us-east-1
+  profile: does-not_exist
   environment: ${self:custom.${self:custom.stage}}
 
 functions:
@@ -31,3 +32,4 @@ functions:
       - http:
           path: hello
           method: get
+
