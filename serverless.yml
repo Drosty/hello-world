@@ -22,7 +22,7 @@ provider:
   runtime: nodejs6.10
   stage: staging
   region: us-east-1
-  profile: does-not_exist
+#  profile: does-not_exist
   environment: ${self:custom.${self:custom.stage}}
 
 functions:
