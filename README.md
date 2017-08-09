@@ -2,9 +2,9 @@
 
 This is a simple Serverless Framework project with a couple of things to note.
 
-- There is one [handler function][handler] that creates a single API endpoint `/hello`.
-- There are a few environment variables in the [`serverless.yml`][enVariables] that are used while deploying.
-- Tests are configured using [Jest][jest].
+- There is one [handler function][https://github.com/fwang/hello/blob/master/controllers/hello.js] that creates a single API endpoint `/hello`.
+- There are a few environment variables in the [`serverless.yml`][https://github.com/fwang/hello/blob/master/serverless.yml#L11] that are used while deploying.
+- Tests are configured using [Jest][https://facebook.github.io/jest/].
 
 ### Usage
 
