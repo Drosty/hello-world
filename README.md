@@ -1,6 +1,35 @@
-[![Build Status](https://travis-ci.org/fwang/hello.svg?branch=master)](https://travis-ci.org/fwang/hello)
+### About this demo project
 
-# Hello Project
-This is a hello world project
+This is a simple Serverless Framework project with a couple of things to note.
 
+- There is one [handler function][handler] that creates a single API endpoint `/hello`.
+- There are a few environment variables in the [`serverless.yml`][enVariables] that are used while deploying.
+- Tests are configured using [Jest][jest].
+
+### Usage
+
+Clone this repo
+
+```bash
+$ git clone https://github.com/fwang/hello
+```
+
+Install the NPM packages
+
+```bash
+$ npm install
+```
+
+Make some changes to `hanlder.js` and run tests
+
+```bash
+$ npm run test
+```
+
+Commit and push to master
+
+```bash
+$ git commit
+$ git push
+```
 
