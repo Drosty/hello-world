@@ -8,14 +8,10 @@ plugins:
 custom:
   webpackIncludeModules: true
   stage: ${opt:stage, self:provider.stage}
-  Production:
+  production:
     MESSAGE: 'I am prod'
-  Staging:
+  dev:
     MESSAGE: 'I am dev'
-    MESSAGE2: 'I am dev 2'
-    MESSAGE3: 'I am dev 3'
-  bbmbp:
-    MESSAGE: 'I am bbmbp'
 
 provider:
   name: aws
