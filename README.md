@@ -36,4 +36,3 @@ $ git push
 [enVariables]: https://github.com/fwang/hello/blob/master/serverless.yml#L11
 [jest]: https://facebook.github.io/jest/
 [handler]: https://github.com/fwang/hello/blob/master/controllers/hello.js
-
