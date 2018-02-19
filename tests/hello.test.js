@@ -1,4 +1,4 @@
-import * as hello from '../controllers/hello';
+import * as hello from '../hello';
 
 test('hello', async () => {
   const event = {};
