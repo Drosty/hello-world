@@ -1,6 +1,6 @@
-import * as hello from '../hello';
+import * as handler from '../handler';
 
-test('hello', async () => {
+test('handler', async () => {
   const event = {};
   const context = {};
   const expected = {
@@ -13,5 +13,5 @@ test('hello', async () => {
   }
 
   expect.assertions(1);
-  await hello.main(event, context, callback);
+  await handler.main(event, context, callback);
 });
