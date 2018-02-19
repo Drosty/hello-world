@@ -1,32 +1,27 @@
-service: hello2
+service: hello-world
 
-# Use the serverless-webpack plugin to transpile ES6
-plugins:
-  - serverless-webpack
-
-# Enable auto-packing of external modules
 custom:
-  webpackIncludeModules: true
   stage: ${opt:stage, self:provider.stage}
-  production:
-    MESSAGE: 'I am prod'
-  dev:
-    MESSAGE: 'I am dev'
 
 provider:
   name: aws
   runtime: nodejs6.10
   stage: staging
   region: us-east-1
-#  profile: does-not_exist
-  environment: ${self:custom.${self:custom.stage}}
 
 functions:
-  hello:
+  get:
     handler: controllers/hello.main
     events:
       - http:
-          path: hello
+          path: /
           method: get
+
+  post:
+    handler: controllers/hello.main
+    events:
+      - http:
+          path: /
+          method: post
 
 
