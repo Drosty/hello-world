@@ -7,14 +7,14 @@ provider:
 
 functions:
   get:
-    handler: controllers/hello.main
+    handler: handler.main
     events:
       - http:
           path: /
           method: get
 
   post:
-    handler: controllers/hello.main
+    handler: handler.main
     events:
       - http:
           path: /
