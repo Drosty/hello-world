@@ -14,7 +14,7 @@ functions:
           method: get
 
   post:
-    handler: handler.main
+    handler: handler.post
     events:
       - http:
           path: /
